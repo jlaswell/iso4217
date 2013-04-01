@@ -76,16 +76,18 @@
      * defaultValue_: value you want to populate the input field by default
      * selector_:     <ul> element you want to add the currency codes too
      * indirect_:     element that will recieve the user action (click)
+     * direct_:       element that will be updated to reflect the user action
      */
-    init: function( defaultKey_,  defaultValue_, selector_, indirect_ ) {
+    init: function( defaultKey_,  defaultValue_, selector_, indirect_, direct_ ) {
         var defaultKey = (defaultKey_ === undefined || data[ defaultKey_ ] === undefined )?active[ 0 ].code:defaultKey_;
+        var defaultValue = (defaultValue_ === undefined)?0:defaultValue_;
         /* Allow for custom tags to be used, but fallback to bootstrap classes. */
         var selector = (selector_ === undefined)?$('.dropdown-menu'):$(selector_);
         var indirect = (indirect_ === undefined)?$('.dropdown-toggle'):$(indirect_);
-        var defaultValue = (defaultValue_ === undefined)?0:defaultValue_;
+        var direct = (indirect_ === undefined)?$('#inputText'):$(direct_);
         selector.empty();
         selector.append( toListItems() );
-        this.bindEvents( selector.selector, indirect, defaultValue );
+        this.bindEvents( selector.selector, indirect, direct, defaultValue );
         $('a:contains("' + defaultKey + '")').trigger( 'click' );
     },
     /* Prep the active array to only use the passed country codes.
@@ -122,13 +124,12 @@
       return this;
     },
     /* Utility function used to update the state of the indirect_ on a selection. */
-    bindEvents: function( selector_, indirect_, defaultValue_ ) {
+    bindEvents: function( selector_, indirect_, direct_, defaultValue_ ) {
       $( selector_ + ' li' ).each( function() {
         $(this).click( function() {
           var $a = $(this).find( 'a' );
           indirect_.html( $a.text() + ' <span class="caret"></span>' );
-          // This needs to be more dynamic. @todo
-          $('#appendedDropdownButton').val((defaultValue_).toFixed( Math.floor( $a.attr( 'data-decimals'))));
+          $(direct_).val((defaultValue_).toFixed( Math.floor( $a.attr( 'data-decimals'))));
         });
       });
     }
