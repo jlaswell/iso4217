@@ -45,13 +45,15 @@
   
   /* Main object to be returned. */
   var that = {
-    /* getX functions will be removed after debugging. */
+    /* Debug functions; uncomment them if you need. */
+    /*
     getActive: function() {
       return active;
     },
     getData: function() {
         return data;
     },
+    */
     /* Outdated. */
     /*
     toListItem: function( key_ ) {
