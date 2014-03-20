@@ -31,7 +31,7 @@
       <section>
         <div class="hero-unit">
           <div class="row-fluid">
-            <div class="offset2 span2 text-center">
+            <div class="span4 text-right">
               <div class="row-fluid">
                 <button class="btn span6" type="button" id="btn-all">ALL</button>
               </div>
@@ -48,7 +48,7 @@
                   <fieldset>
                   <legend>ISO 4217 Example -- <span>ALL</span>
                     <small>... all the things</small></legend>
-                  <label>Cashmoney</label>
+                  <label>Amount</label>
                   <input class="input-small text-right" id="inputText" type="text"></input>
                   <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownToggle">
@@ -88,7 +88,7 @@
             function all( event ) {
                 iso4217.all().init( 'NONEXISTANTKEY', 8);
                 span.text( 'ALL' );
-                small.text( '... all the things!');
+                small.text( 'All the things!');
                 clean($(event.target));
                 // $('#btn-all').addClass('btn-primary');
             }
