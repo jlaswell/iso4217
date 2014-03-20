@@ -29,50 +29,40 @@
         </ul>
       </header>
       <section>
-        <div class="container">
-            <div class="row-fluid" style="margin-top:1em;">
-                <div class="span6 text-left">
-                    <h4><a class="muted" href="http://twitter.com/john_laswell" target="_blank">@john_laswell</a></h4>
-                </div>
-                <div class="span6 text-right">
-                    <h4>ISO 4217 Selector</h4>
-                </div>
+        <div class="hero-unit">
+          <div class="row-fluid">
+            <div class="offset2 span2 text-center">
+              <div class="row-fluid">
+                <button class="btn span6" type="button" id="btn-all">ALL</button>
+              </div>
+              <div class="row-fluid">
+                <button class="btn span6" type="button" id="btn-only">ONLY</button>
+              </div>
+              <div class="row-fluid">
+                <button class="btn span6" type="button" id="btn-omit">OMIT</button>
+              </div>
             </div>
-            <div class="hero-unit">
-                <div class="row-fluid">
-                    <div class="offset2 span2 text-center">
-                        <div class="row-fluid">
-                            <button class="btn span6" type="button" id="btn-all">ALL</button>
-                        </div>
-                        <div class="row-fluid">
-                            <button class="btn span6" type="button" id="btn-only">ONLY</button>
-                        </div>
-                        <div class="row-fluid">
-                            <button class="btn span6" type="button" id="btn-omit">OMIT</button>
-                        </div>
-                    </div>
-                    <div class="span8 text-left">
-                        <div class="input-append" id="dropdownParent-only">
-                            <form>
-                                <fieldset>
-                                <legend>ISO 4217 Example -- <span>ALL</span>
-                                    <small>... all the things</small></legend>
-                                <label>Cashmoney</label>
-                                <input class="input-small text-right" id="inputText" type="text"></input>
-                                <div class="btn-group">
-                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownToggle">
-                                        Action
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="button" aria-labelledby="currencyLabel" id="dropdownMenu">
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <div class="span8 text-left">
+              <div class="input-append" id="dropdownParent-only">
+                <form>
+                  <fieldset>
+                  <legend>ISO 4217 Example -- <span>ALL</span>
+                    <small>... all the things</small></legend>
+                  <label>Cashmoney</label>
+                  <input class="input-small text-right" id="inputText" type="text"></input>
+                  <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownToggle">
+                      Action
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="button" aria-labelledby="currencyLabel" id="dropdownMenu">
+                      <li><a href="#"></a></li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
       </section>
       <footer>
