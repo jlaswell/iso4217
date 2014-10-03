@@ -1,7 +1,7 @@
 iso4217.js
 =======
 
-[Required Example](http://goo.gl/R74tL)
+[Required Example](http://jlaswell.github.io/iso4217/)
 
 A javascript object used to reference ISO 4217 currency codes. Fair warning, atm this requires Twitter Bootstrap and jQuery.
 
